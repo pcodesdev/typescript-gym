@@ -112,4 +112,3 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 };
 
 export default Navbar;
-// Finnished creating the navbar @144
