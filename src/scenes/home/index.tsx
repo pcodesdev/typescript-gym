@@ -90,7 +90,7 @@ const Home = ({ setSelectedPage }: Props) => {
               <img src={SponsorSafaricom} alt="Safaricom" />
               <img src={SponsorRedBull} alt="Redbull" />
               <img src={SponsorForbes} alt="Forbes" />
-              <img src={SponsorFortune} alt="Fprtune" />
+              <img src={SponsorFortune} alt="Fortune" />
             </div>
           </div>
         </div>
@@ -100,4 +100,3 @@ const Home = ({ setSelectedPage }: Props) => {
 };
 
 export default Home;
-// Finnished @220
