@@ -8,7 +8,9 @@ import {
 import { SelectedPage, BenefitType } from "@/shared/types";
 import { motion } from "framer-motion";
 import HText from "@/shared/HText";
+import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
 import Benefit from "./Benefit";
+import ActionButton from "@/shared/ActionButton";
 
 type Props = { setSelectedPage: (value: SelectedPage) => void };
 
@@ -84,10 +86,73 @@ const Benefits = ({ setSelectedPage }: Props) => {
             />
           ))}
         </motion.div>
+        {/* GRAPHICS AND DESCRIPTION */}
+        <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
+          <img
+            className="mx-auto"
+            src={BenefitsPageGraphic}
+            alt="benefits-page-graphics"
+          />
+          {/* DESCRIPTION */}
+          <div className="">
+            {/* TITLE */}
+            <div className="relative">
+              <div className="before: before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 1.0 }}
+                  transition={{ duration: 1.0 }}
+                  variants={{
+                    hidden: { opacity: 0, x: 100 },
+                    visible: { opacity: 1, x: 20 },
+                  }}
+                  className=""
+                >
+                  <HText>
+                    MILLIONS OF HAPPY MEMBERS GETTING {""}{" "}
+                    <span className="text-primary-500">FIT</span>
+                  </HText>
+                </motion.div>
+              </div>
+            </div>
+            {/* DESCRIPTION */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 1.0 }}
+              transition={{ delay: 0.3, duration: 1.0 }}
+              variants={{
+                hidden: { opacity: 0, x: -100 },
+                visible: { opacity: 1, x: 20 },
+              }}
+              className=""
+            >
+              <p className="my-5 text-justify ">
+                Amet quis laborum quis sint nulla eu in sit consectetur. Ut quis
+                officia sint dolor. Reprehenderit consequat laboris incididunt
+                fugiat laborum magna consequat veniam ullamco.
+              </p>
+              <p className="mb-5 text-justify ">
+                Amet quis laborum quis sint nulla eu in sit consectetur. Ut quis
+                officia sint dolor. Reprehenderit consequat laboris incididunt
+                fugiat laborum magna consequat veniam ullamco.
+              </p>
+            </motion.div>
+            {/* BUTTON */}
+            <div className="relative mt-16">
+              <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
+                <ActionButton setSelectedPage={setSelectedPage}>
+                  Join Now
+                </ActionButton>
+              </div>
+            </div>
+          </div>
+        </div>
       </motion.div>
     </section>
   );
 };
 
 export default Benefits;
-//@250
+//@300
