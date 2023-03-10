@@ -7,7 +7,7 @@ import HText from "@/shared/HText";
 type Props = { setSelectedPage: (value: SelectedPage) => void };
 
 const ContactUs = ({ setSelectedPage }: Props) => {
-  const inputStyles = ` mt-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`;
+  const inputStyles = ` mb-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`;
   const {
     register,
     trigger,
@@ -62,10 +62,10 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             className="mt-10 basis-3/5 md:mt-0"
           >
             <form
-              action="https://formsubmit.co/pcodesdev@gmail.com"
               target="_blank"
-              onSubmit={onSubmit}
+              action="https://formsubmit.co/362bd42b0e08cfaa542bf94d2ea659e4"
               method="POST"
+              onSubmit={onSubmit}
             >
               <input
                 className={inputStyles}
@@ -125,6 +125,25 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                 SUBMIT
               </button>
             </form>
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 1.0 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -100 },
+              visible: { opacity: 1, x: 20 },
+            }}
+            className="relative mt-16 basis-2/5 md:mt-0"
+          >
+            <div className="w-full before:absolute before:-bottom-20 before:-right-10 before:-z-[-1] md:before:content-evolvetext">
+              <img
+                className="w-full"
+                src={ContactUsPageGraphic}
+                alt="contact-us-page-graphic"
+              />
+            </div>
           </motion.div>
         </div>
       </motion.div>
